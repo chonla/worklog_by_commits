@@ -1,0 +1,7 @@
+projects:
+    - name: <Name of project, can be any.>
+      path: <Relative path to current project>
+criteria:
+    since: "2020-09-01"
+    until: "2020-11-30"
+    author: <author's email address>
