@@ -17,7 +17,9 @@ projects:
 criteria:
     since: "2020-09-01"
     until: "2020-11-30"
-    author: chonlasith@gmail.com
+    authors:
+        - author1@emailaddress.com
+        - author2@emailaddress.com
 message: "${date}\tS1\t\t[${project_name}] ${message_1_line}"
 reverse: false
 ```
