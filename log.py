@@ -33,10 +33,12 @@ if __name__ == "__main__":
             project_name = project['name']
             repo = Repo(project['path'])
             for branch in repo.branches:
-                commits_in_branch = list(repo.iter_commits(branch, since=data["criteria"]["since"], until=data["criteria"]["until"], author=data["criteria"]["author"]))
-                for commit in commits_in_branch:
-                    hash = str(commit.hexsha)
-                    all_commits[hash] = { 'project': project_name, 'commit': commit}
+                authors = data['criteria']['authors']
+                for author in authors:
+                    commits_in_branch = list(repo.iter_commits(branch, since=data["criteria"]["since"], until=data["criteria"]["until"], author=author))
+                    for commit in commits_in_branch:
+                        hash = str(commit.hexsha)
+                        all_commits[hash] = { 'project': project_name, 'commit': commit}
 
         commits = all_commits.values()
         commits = sorted(commits, key=lambda data: data['commit'].committed_date, reverse=data['reverse'])

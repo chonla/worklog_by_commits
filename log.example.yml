@@ -4,6 +4,8 @@ projects:
 criteria:
     since: "2020-09-01"
     until: "2020-11-30"
-    author: <author's email address>
+    authors: 
+        - <author's email address>
+        - <other author's email address>
 message: "${date}\tS1\t\t[${project_name}] ${message_1_line}"
 reverse: false
