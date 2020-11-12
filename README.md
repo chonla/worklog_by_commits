@@ -18,9 +18,22 @@ criteria:
     since: "2020-09-01"
     until: "2020-11-30"
     author: chonlasith@gmail.com
-message: "${date}\tS1\t\t$[{project_name}] ${message_1_line}"
+message: "${date}\tS1\t\t[${project_name}] ${message_1_line}"
 reverse: false
 ```
+
+## Variables
+
+Variables can be used in message template.
+
+| Variable Name | Description |
+| ---- | ---- |
+| date | Committed Date in 1-Jan-1970 format |
+| project_name | Project name defined in yaml |
+| hash | Commit ID |
+| short_hash | Shortened commit ID |
+| message_1_line | The first line of commit message |
+| message | Commit message |
 
 ## Installation
 
