@@ -9,3 +9,7 @@ criteria:
         - <other author's email address>
 message: "${date}\tS1\t\t[${project_name}] ${message_1_line}"
 reverse: false
+jira:
+    team: <jira-team-name>
+    username: <your-jira-account>
+    token: <your-jira-access-token>

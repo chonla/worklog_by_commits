@@ -1,6 +1,6 @@
 # Worklog by commits
 
-Create worklog by commit messages from several projects.
+Create worklog by commit messages/JIRA title from several projects.
 
 ## Configuration Example (log.yml)
 
@@ -22,6 +22,10 @@ criteria:
         - author2@emailaddress.com
 message: "${date}\tS1\t\t[${project_name}] ${message_1_line}"
 reverse: false
+jira:
+    team: myteam
+    username: author1@emailaddress.com
+    token: dairCKAOjg02ncaSDF
 ```
 
 ## Variables
@@ -36,6 +40,7 @@ Variables can be used in message template.
 | short_hash | Shortened commit ID |
 | message_1_line | The first line of commit message |
 | message | Commit message |
+| jira_title | Jira item's title |
 
 ## Installation
 
